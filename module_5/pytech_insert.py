@@ -38,19 +38,3 @@ for record in records:
     new_student_lName = record.get("last_name") 
     print("Inserted student record "+str(new_student_fName)+" "+str(new_student_lName)+"into the students collection with document_id "+str(new_student_Id))
 
-docs = pytech.find()
-
-print("-- DISPLAYING STUDENTS DOCUMENTS FROM find() Query --")
-
-for doc in docs:
-    print("Student ID: "+doc["student_id"])
-    print("First Name: "+doc["first_name"])
-    print("Last Name: "+doc["last_name"])
-
-findRecord = pytech.find_one({"student_id": "1008"})
-print("-- DISPLAYING STUDENTS DOCUMENTS FROM find_one() Query --")
-
-for record in findRecord:
-    print("Student ID: "+findRecord["student_id"])
-    print("First Name: "+findRecord["first_name"])
-    print("Last Name: "+findRecord["last_name"])
